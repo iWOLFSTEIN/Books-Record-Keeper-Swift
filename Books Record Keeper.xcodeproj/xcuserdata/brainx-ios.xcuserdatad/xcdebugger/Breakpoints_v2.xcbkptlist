@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2591CBE6-52B1-4274-9AFC-BE11EE8109AC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75A69418-DEF0-4FA2-8796-2D9617A0269F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Books Record Keeper/Screens/Home/HomeContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "deleteButtonTapped(forCell:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF86A55A-DA2B-4830-84DC-0DF497C8E8E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Books Record Keeper/Screens/Home/HomeContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "deleteButtonTapped(forCell:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FF86A55A-DA2B-4830-84DC-0DF497C8E8E8 - cc67aa86ec68840d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in Books_Record_Keeper.HomeContentView.deleteButtonTapped(forCell: Books_Record_Keeper.HomeTableViewCell) -&gt; ()"
+                  moduleName = "Books Record Keeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brainx-ios/Documents/projects/Books%20Record%20Keeper/Books%20Record%20Keeper/Screens/Home/HomeContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "FF86A55A-DA2B-4830-84DC-0DF497C8E8E8 - 8892b9ab060770b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 @Swift.MainActor () -&gt; () in Books_Record_Keeper.HomeContentView.deleteButtonTapped(forCell: Books_Record_Keeper.HomeTableViewCell) -&gt; ()"
+                  moduleName = "Books Record Keeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/brainx-ios/Documents/projects/Books%20Record%20Keeper/Books%20Record%20Keeper/Screens/Home/HomeContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "281EAD92-3677-4ACD-BF5E-847C20D82BAB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Books Record Keeper/Screens/Home/HomeTableViewCell/HomeTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "deleteCell(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
