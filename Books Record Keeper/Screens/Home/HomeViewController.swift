@@ -75,11 +75,11 @@ extension HomeViewController: HomeContentViewDelegate {
             return
         }
         if !text.isEmpty {
-            viewModel.createRecord(withName: text, inEntity: .books)
+            viewModel.createBookRecord(withName: text)
             contentView.textField.text = ""
         }
         
-        var records: [Book] = self.viewModel.retrieveAllBooksRecords()
+        let records: [Book] = self.viewModel.retrieveAllBooksRecords()
         print(records)
     }
 }

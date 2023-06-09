@@ -32,14 +32,6 @@ class HomeContentView: UIView {
     }
     
     @IBAction func addBook(_ sender: Any) {
-//        guard let text = textField.text else {
-//            return
-//        }
-//        if !text.isEmpty {
-//            DummyDatabase.shared.addBook(withName: text)
-//            textField.text = ""
-//            tableView.reloadData()
-//        }
         delegate?.addBook()
     }
 }
