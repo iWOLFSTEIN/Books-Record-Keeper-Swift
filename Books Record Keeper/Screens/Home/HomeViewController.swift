@@ -12,9 +12,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var contentView: HomeContentView!
     
     var viewModel: HomeViewModel = HomeViewModel()
+    var booksRecords: [Book]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        booksRecords = viewModel.retrieveAllBooksRecords()
         
         contentView.delegate = self
         contentView.tableView.delegate = self
@@ -41,14 +44,15 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DummyDatabase.shared.books.count
+        return booksRecords.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.reusableIdentifier, for: indexPath) as! HomeTableViewCell
         
         cell.delegate = self
-        cell.title.text = DummyDatabase.shared.books[indexPath.row]
+        cell.title.text = booksRecords[indexPath.row].name
+        cell.subtitle.text = booksRecords[indexPath.row].creationDate
         
         return cell
     }
@@ -78,8 +82,6 @@ extension HomeViewController: HomeContentViewDelegate {
             viewModel.createBookRecord(withName: text)
             contentView.textField.text = ""
         }
-        
-        let records: [Book] = self.viewModel.retrieveAllBooksRecords()
-        print(records)
+        contentView.tableView.reloadData()
     }
 }
