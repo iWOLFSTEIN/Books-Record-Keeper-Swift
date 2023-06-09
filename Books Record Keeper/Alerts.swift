@@ -10,13 +10,11 @@ import UIKit
 func showAlert(from viewController: UIViewController, withTitle title: String, andSubtitle subtitle: String, withCustomAction: (() -> Void)? = nil) {
     let alertController = UIAlertController(title: title, message: subtitle, preferredStyle: .alert)
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-        print("Cancel action tapped")
     }
     alertController.addAction(cancelAction)
     
     if let customAction = withCustomAction {
         let customAction = UIAlertAction(title: "Delete", style: .default) { _ in
-            print("Custom action tapped")
             customAction()
         }
         alertController.addAction(customAction)

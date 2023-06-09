@@ -28,7 +28,6 @@ class CoreDataDatabase {
         
         do {
             try managedContext.save()
-            print("Record Saved!")
         } catch let error as NSError {
             print(error)
         }
@@ -60,7 +59,6 @@ class CoreDataDatabase {
             let records = try managedContext.fetch(fetchRequest)
             for record in records {
                 managedContext.delete(record as! NSManagedObject)
-                print("Record Deleted!")
             }
             try managedContext.save()
         } catch let error as NSError {
