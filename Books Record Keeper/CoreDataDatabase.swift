@@ -29,18 +29,42 @@ class CoreDataDatabase {
         do {
             try managedContext.save()
             print("Record Saved!")
-        } catch _ as NSError {}
+        } catch let error as NSError {
+            print(error)
+        }
     }
     
-    func retrieveAllRecords(ofEntity entity: DatabaseEntities, completion: @escaping (_ : [NSFetchRequestResult]) -> Void)  {
+    func retrieveAllRecords(ofEntity entity: DatabaseEntities, sortDescriptor: NSSortDescriptor? = nil, completion: @escaping (_ : [NSFetchRequestResult]) -> Void)  {
         guard let managedContext = initNSManagedObjectContext() else { return }
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
+        
+        if let sortDescriptor {
+            fetchRequest.sortDescriptors = [sortDescriptor]
+        }
         
         do {
             let result = try managedContext.fetch(fetchRequest)
             completion(result)
         } catch {
             completion([])
+        }
+    }
+    
+    func deleteRecord(ofEntity entity: DatabaseEntities, completion: @escaping (_ : NSFetchRequest<NSFetchRequestResult>) -> Void) {
+        guard let managedContext = initNSManagedObjectContext() else { return }
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity.rawValue)
+        
+        completion(fetchRequest)
+        
+        do {
+            let records = try managedContext.fetch(fetchRequest)
+            for record in records {
+                managedContext.delete(record as! NSManagedObject)
+                print("Record Deleted!")
+            }
+            try managedContext.save()
+        } catch let error as NSError {
+            print(error)
         }
     }
 }

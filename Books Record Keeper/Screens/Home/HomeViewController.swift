@@ -24,6 +24,11 @@ class HomeViewController: UIViewController {
         contentView.tableView.dataSource = self
         
     }
+    
+    func updateTableData() {
+        booksRecords = viewModel.retrieveAllBooksRecords()
+        contentView.tableView.reloadData()
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -67,8 +72,8 @@ extension HomeViewController: HomeTableViewCellDelegate {
     func deleteButtonTapped(forCell cell: HomeTableViewCell) {
         showAlert(from: self, withTitle: "Confirm", andSubtitle: "Are you sure you want to delete?", withCustomAction: {
             let text = cell.title.text
-            DummyDatabase.shared.removeBook(withName: text!)
-            self.contentView.tableView.reloadData()
+            self.viewModel.deleteBookRecord(withName: text!)
+            self.updateTableData()
         })
     }
 }
@@ -81,7 +86,7 @@ extension HomeViewController: HomeContentViewDelegate {
         if !text.isEmpty {
             viewModel.createBookRecord(withName: text)
             contentView.textField.text = ""
+            updateTableData()
         }
-        contentView.tableView.reloadData()
     }
 }
