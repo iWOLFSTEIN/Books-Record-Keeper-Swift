@@ -19,6 +19,7 @@
 		126233C32A31E3B70063E7B0 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 126233C12A31E3B70063E7B0 /* HomeTableViewCell.xib */; };
 		126233C62A31E5BC0063E7B0 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126233C52A31E5BC0063E7B0 /* UITableViewCell.swift */; };
 		126233CB2A31FCF50063E7B0 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126233CA2A31FCF50063E7B0 /* Alerts.swift */; };
+		126233CF2A31FEC10063E7B0 /* DummyDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126233CE2A31FEC10063E7B0 /* DummyDatabase.swift */; };
 		126233D12A3202AD0063E7B0 /* HomeViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126233D02A3202AD0063E7B0 /* HomeViewProtocols.swift */; };
 		126233D32A32063F0063E7B0 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126233D22A32063F0063E7B0 /* UIViewController.swift */; };
 		126233D52A3220DB0063E7B0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126233D42A3220DB0063E7B0 /* HomeViewModel.swift */; };
@@ -41,6 +42,7 @@
 		126233C12A31E3B70063E7B0 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		126233C52A31E5BC0063E7B0 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		126233CA2A31FCF50063E7B0 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		126233CE2A31FEC10063E7B0 /* DummyDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDatabase.swift; sourceTree = "<group>"; };
 		126233D02A3202AD0063E7B0 /* HomeViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocols.swift; sourceTree = "<group>"; };
 		126233D22A32063F0063E7B0 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		126233D42A3220DB0063E7B0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				126233BC2A31DB1C0063E7B0 /* Screens */,
 				126233C72A31E5C10063E7B0 /* Extensions */,
 				126233CA2A31FCF50063E7B0 /* Alerts.swift */,
+				126233CE2A31FEC10063E7B0 /* DummyDatabase.swift */,
 				126233D82A330FF50063E7B0 /* CoreDataDatabase.swift */,
 			);
 			path = "Books Record Keeper";
@@ -206,6 +209,7 @@
 			files = (
 				126233C22A31E3B70063E7B0 /* HomeTableViewCell.swift in Sources */,
 				126233BB2A31DAE80063E7B0 /* HomeViewController.swift in Sources */,
+				126233CF2A31FEC10063E7B0 /* DummyDatabase.swift in Sources */,
 				126233D32A32063F0063E7B0 /* UIViewController.swift in Sources */,
 				126233CB2A31FCF50063E7B0 /* Alerts.swift in Sources */,
 				126233A42A31D6A50063E7B0 /* AppDelegate.swift in Sources */,
