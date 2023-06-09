@@ -10,11 +10,16 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var contentView: HomeContentView!
-
+    
+    var viewModel: HomeViewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contentView.delegate = self
         contentView.tableView.delegate = self
         contentView.tableView.dataSource = self
+        
     }
 }
 
@@ -61,5 +66,20 @@ extension HomeViewController: HomeTableViewCellDelegate {
             DummyDatabase.shared.removeBook(withName: text!)
             self.contentView.tableView.reloadData()
         })
+    }
+}
+
+extension HomeViewController: HomeContentViewDelegate {
+    func addBook() {
+        guard let text = contentView.textField.text else {
+            return
+        }
+        if !text.isEmpty {
+            viewModel.createRecord(withName: text, inEntity: .books)
+            contentView.textField.text = ""
+        }
+        
+        var records: [Book] = self.viewModel.retrieveAllBooksRecords()
+        print(records)
     }
 }

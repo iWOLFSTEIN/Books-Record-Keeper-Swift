@@ -11,3 +11,6 @@ protocol HomeTableViewCellDelegate: AnyObject {
     func deleteButtonTapped(forCell cell: HomeTableViewCell)
 }
 
+protocol HomeContentViewDelegate: AnyObject {
+    func addBook()
+}

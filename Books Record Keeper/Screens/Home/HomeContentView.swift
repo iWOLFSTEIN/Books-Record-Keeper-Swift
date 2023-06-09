@@ -14,6 +14,8 @@ class HomeContentView: UIView {
     @IBOutlet weak var textFieldView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    weak var delegate: HomeContentViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -30,14 +32,15 @@ class HomeContentView: UIView {
     }
     
     @IBAction func addBook(_ sender: Any) {
-        guard let text = textField.text else {
-            return
-        }
-        if !text.isEmpty {
-            DummyDatabase.shared.addBook(withName: text)
-            textField.text = ""
-            tableView.reloadData()
-        }
+//        guard let text = textField.text else {
+//            return
+//        }
+//        if !text.isEmpty {
+//            DummyDatabase.shared.addBook(withName: text)
+//            textField.text = ""
+//            tableView.reloadData()
+//        }
+        delegate?.addBook()
     }
 }
 
